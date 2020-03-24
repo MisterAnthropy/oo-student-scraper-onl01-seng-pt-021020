@@ -9,9 +9,6 @@ class Scraper
     html = open(index_url)
   end
   
-   def
-    
-  end
 
   def self.scrape_profile_page(profile_url)
     
