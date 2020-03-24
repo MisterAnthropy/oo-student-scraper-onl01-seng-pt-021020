@@ -11,7 +11,7 @@ class Scraper
      hash = {
        name: student.css("h4.student-name").text,
        location: student.css("p.student-name").text,
-       profile_url: ""
+       profile_url: student.ccs("a")
      }
     
   end
