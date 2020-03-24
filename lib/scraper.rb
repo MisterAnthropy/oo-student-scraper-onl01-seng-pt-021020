@@ -12,7 +12,7 @@ class Scraper
     students = doc.css(".student-card")
     students.each do |student|
       
-      name: 
+      name = 
   end
   
 
