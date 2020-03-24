@@ -28,17 +28,17 @@ class Scraper
     container = page.css(".social-icon-container a").collect{|icon| icon.attribute("href").value}
     container.each do |link|
       if link.include?("twitter")
-        student[:twitter] = link
+        scraped_student[:twitter] = link
       elsif link.include?("linkedin")
-        student[:linkedin] = link
+        scraped_student[:linkedin] = link
       elsif link.include?("github")
-        student[:github] = link
+        scraped_student[:github] = link
       elsif link.include?(".com")
-        student[:blog] = link
+        scraped_student[:blog] = link
       end
     end
-    student[:profile_quote] = page.css(".profile-quote").text
-    student[:bio] = page.css("div.description-holder p").text
+    scraped_student[:profile_quote] = page.css(".profile-quote").text
+    scraped_student[:bio] = page.css("div.description-holder p").text
 
   end
   
