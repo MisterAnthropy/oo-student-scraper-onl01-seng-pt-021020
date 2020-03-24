@@ -25,7 +25,7 @@ class Scraper
     page = Nokogiri::HTML(open(profile_url))
     scraped_student = {}
     
-    container = page.css(".social-icon-container a")
+    container = page.css(".social-icon-container a").collect{|icon| icon.attribute("href")
 
     
   end
