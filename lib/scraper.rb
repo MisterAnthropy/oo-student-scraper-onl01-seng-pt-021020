@@ -11,7 +11,7 @@ class Scraper
      hash = {
        name: student.css("h4.student-name").text,
        location: student.css("p.student-name").text,
-       profile_url: "https://learn-co-curriculum.github.io/" + student.ccs("a").attribute("href")
+       profile_url: "http://learn-co-curriculum.github.io/" + student.ccs("a").attribute("href")
      }
     scraped_students << hash
   end
